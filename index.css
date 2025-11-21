@@ -1,0 +1,334 @@
+/* =========================================
+   1. إعدادات الألوان والمتغيرات (Color Palette)
+   ========================================= */
+:root {
+  /* الألوان الرئيسية */
+  --primary-color: #4f46e5;       /* أزرق نيلي */
+  --secondary-color: #f59e0b;     /* برتقالي */
+  --accent-color: #10b981;        /* أخضر */
+  
+  /* ألوان النصوص والكروت */
+  --card-bg: #ffffff;             
+  --text-main: #111827;           
+  --text-muted: #6b7280;          
+  
+  /* الظلال */
+  --main-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   2. إعدادات عامة والخلفية (Global & Background)
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  
+  /* --- بداية كود الخلفية الجديد --- */
+  background-color: #f3f4f6; /* لون أساسي احتياطي */
+  
+  /* تدرج لوني (Mesh Gradient): بقعة زرقاء أعلى اليسار، وبقعة برتقالية أسفل اليمين */
+  background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
+      
+  background-attachment: fixed; /* يجعل الخلفية ثابتة أثناء السكرول */
+  background-size: cover;
+  /* --- نهاية كود الخلفية --- */
+}
+
+/* تحسين الروابط */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* باقي الكود كما هو (Header, Carousel, Cards...) */
+/* =========================================
+   3. تنسيقات الهيدر والناف بار (Header & Navbar)
+   ========================================= */
+header.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* جعل الناف بار أبيض مع ظل خفيف */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9) !important; /* شبه شفاف */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: var(--main-shadow);
+  padding: 10px 20px;
+}
+
+/* أنيميشن لوجو الموقع */
+.navbar-brand img {
+  transition: all 0.5s ease;
+}
+
+.navbar-brand:hover img {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* روابط الناف بار */
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* صورة البروفايل الدائرية */
+.rounded-circle {
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.rounded-circle:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+}
+
+/* =========================================
+   4. السلايدر الرئيسي (Hero Section & Carousel)
+   ========================================= */
+.hero-slide {
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0 0 20px 20px; /* تدوير الحواف السفلية */
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); /* تدرج لوني بدل لون ثابت */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.content p {
+  font-size: 20px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  opacity: 0.9;
+}
+
+/* ضبط ارتفاع صور الكاروسيل */
+.carousel-item {
+  height: 650px;
+}
+
+.carousel-item img {
+  height: 650px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+    background-color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* تأثير اللمعة (Shimmer Effect) */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  animation: shimmer 4s infinite;
+  pointer-events: none;
+}
+
+/* =========================================
+   5. تنسيقات النصوص والعناوين (Typography)
+   ========================================= */
+/* تنسيق العنوان ml9 */
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0.05em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* تنسيق العنوان ml2 */
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+  margin-bottom: 1.5rem;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* التدرج اللوني للنصوص المتحركة باستخدام متغيرات الألوان */
+.ml9 .letters,
+.ml2 {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================================
+   6. تنسيقات الكروت والمنتجات (Cards & Products)
+   ========================================= */
+.card {
+    background-color: var(--card-bg);
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 15px;
+    box-shadow: var(--main-shadow); /* إضافة ظل ناعم */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* تأثير الهوفر على الكارت بالكامل */
+.card:hover {
+    transform: translateY(-10px); /* يرتفع لأعلى */
+    box-shadow: var(--hover-shadow); /* ظل أقوى */
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* تنسيقات خاصة للكروت العريضة (What We Sell) */
+.product-card {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.product-card:hover::before {
+  left: 100%;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  filter: grayscale(30%); /* تقليل التشبع قليلاً */
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* =========================================
+   7. أيقونات التواصل (WhatsApp & Links)
+   ========================================= */
+.whats {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+.whats a {
+  text-decoration: none;
+}
+
+.whatsApp {
+  width: 45px;
+  height: 45px;
+  filter: drop-shadow(0 4px 6px rgba(16, 185, 129, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+/* تنسيق رابط "Let's chat" */
+.whats a.link-dark {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.whats a.link-dark:hover {
+    color: var(--secondary-color) !important;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}

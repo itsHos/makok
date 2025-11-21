@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ================= روابط المكتبات وملفات CSS ================= -->
+    
+    <!-- مكتبة AOS (لأنيميشن السكرول) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- مكتبة Animate.css (حركات جاهزة) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- ملف التنسيقات الخاص بالموقع -->
+    <link rel="stylesheet" href="./index.css" />
+    
+    <!-- أيقونة الموقع في التبويب -->
+    <link
+      rel="shortcut icon"
+      href="./icons/mackok_icon.ico"
+      type="image/x-icon"
+    />
+    
+    <!-- مكتبة Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Macoc</title>
+  </head>
+  <body>
+    
+    <!-- ================= بداية الهيدر (Header & Navbar) ================= -->
+    <header class="container py-3">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary w-100 d-flex align-items-center animate__animated animate__fadeInDown"
+      >
+        <!-- اللوجو (الصورة على اليسار) -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="./icons/mackok_icon.ico"
+            style="width: 80px; height: 80px"
+          />
+        </a>
+
+        <!-- زر القائمة للموبايل (Hamburger Menu) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- محتوى القائمة (الروابط + الصورة اليمين) داخل القائمة المنسدلة -->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="mainNav"
+        >
+          <!-- الروابط في المنتصف -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- الصورة الشخصية (على اليمين) -->
+          <a href="#">
+            <img
+              src="./icons/istockphoto-1386179512-1024x1024.jpg"
+              class="rounded-circle"
+              style="width: 80px; height: 80px"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- ================= نهاية الهيدر ================= -->
+
+    <!-- ================= بداية السلايدر الرئيسي (Hero Carousel) ================= -->
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide animate__animated animate__zoomIn"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        
+        <!-- الشريحة الأولى -->
+        <div class="carousel-item active">
+          <div
+            class="hero-slide"
+            style="
+              background-image: url('./img/pexels-jessbaileydesign-788946.jpg');
+            "
+          >
+            <div class="overlay">
+              <div class="content">
+                <h1>hello</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الشريحة الثانية -->
+        <div class="carousel-item">
+          <div
+            class="hero-slide"
+            style="
+              background-image: url('./img/pexels-jessbaileydesign-788946.jpg');
+            "
+          >
+            <div class="overlay">
+              <div class="content">
+                <h1>hello</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الشريحة الثالثة -->
+        <div class="carousel-item">
+          <div
+            class="hero-slide"
+            style="
+              background-image: url('./img/pexels-jessbaileydesign-788946.jpg');
+            "
+          >
+            <div class="overlay">
+              <div class="content">
+                <h1>hello</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================= نهاية السلايدر الرئيسي ================= -->
+
+    <!-- ================= بداية قسم What We Sell ================= -->
+    <div class="container my-4">
+      <!-- عنوان القسم -->
+      <h1 class="ml9 my-2 d-flex justify-content-center">
+        <span class="text-wrapper">
+          <span class="letters"> what we sell</span>
+        </span>
+      </h1>
+
+      <!-- الصف الأول: الكروت الصغيرة -->
+      <div class="row g-3">
+        <!-- كارت 1 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="row g-0">
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card New</h5>
+                  <p class="card-text">Some more text.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <img
+                  src="./img/pexels-jessbaileydesign-788946.jpg"
+                  class="product-img rounded-end img2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت 2 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="row g-0">
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some more text.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <img
+                  src="./img/pexels-jessbaileydesign-788946.jpg"
+                  class="product-img rounded-end img2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت 3 -->
+        <div class="col-md-4">
+          <div class="card product-card">
+            <div class="row g-0">
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some more text.</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <img
+                  src="./img/pexels-jessbaileydesign-788946.jpg"
+                  class="product-img rounded-end img2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الصف الثاني: الكروت العريضة -->
+      <div class="row g-4 my-1">
+        
+        <!-- كارت عريض 1 -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="row g-0 flex-row-reverse">
+              <!-- reverse عشان الصورة تكون على اليمين -->
+              <div class="col-md-4">
+                <img
+                  src="./img/pexels-jessbaileydesign-788946.jpg"
+                  class="img-fluid rounded-end img2"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت عريض 2 -->
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="row g-0 flex-row-reverse">
+              <div class="col-md-4">
+                <img
+                  src="./img/pexels-jessbaileydesign-788946.jpg"
+                  class="img-fluid rounded-end img2"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Another wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================= نهاية قسم What We Sell ================= -->
+
+    <!-- ================= بداية قسم Best Seller ================= -->
+    <h1 class="ml2 d-flex justify-content-center">best seller</h1>
+    <div class="container my-4">
+      <div class="row g-3">
+        
+        <!-- كارت المنتج 1 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="./img/pexels-jessbaileydesign-788946.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card’s content.
+              </p>
+              <!-- زر الواتساب -->
+              <div class="whats">
+                <a href="https://wa.me/201152419297">
+                  <img class="whatsApp" src="./icons/whatsapp.png" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/201152419297"
+                  class="link-underline-opacity-0 link-underline-opacity-0-hover link-dark link-offset-2"
+                  >let's chat!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت المنتج 2 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="./img/pexels-jessbaileydesign-788946.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title 2</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card’s content.
+              </p>
+              <div class="whats">
+                <a href="https://wa.me/201152419297">
+                  <img class="whatsApp" src="./icons/whatsapp.png" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/201152419297"
+                  class="link-underline-opacity-0 link-underline-opacity-0-hover link-dark link-offset-2"
+                  >let's chat!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت المنتج 3 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="./img/pexels-jessbaileydesign-788946.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title 3</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card’s content.
+              </p>
+              <div class="whats">
+                <a href="https://wa.me/201152419297">
+                  <img class="whatsApp" src="./icons/whatsapp.png" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/201152419297"
+                  class="link-underline-opacity-0 link-underline-opacity-0-hover link-dark link-offset-2"
+                  >let's chat!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- كارت المنتج 4 -->
+        <div class="col-md-3">
+          <div class="card">
+            <img
+              src="./img/pexels-jessbaileydesign-788946.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title 4</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card’s content.
+              </p>
+              <div class="whats">
+                <a href="https://wa.me/201152419297">
+                  <img class="whatsApp" src="./icons/whatsapp.png" alt="" />
+                </a>
+                <a
+                  href="https://wa.me/201152419297"
+                  class="link-underline-opacity-0 link-underline-opacity-0-hover link-dark link-offset-2"
+                  >let's chat!</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================= نهاية قسم Best Seller ================= -->
+
+    <!-- ================= بداية سلايدر الفوتر (Dark Carousel) ================= -->
+    <div
+      id="carouselExampleDark"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img
+            src="./img/pexels-valerie-polishchuk-246988438-13034999.jpg"
+            class="d-block w-100 carousel-img"
+            alt=""
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mobile Store</h5>
+            <p>Best phones with best prices</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="./img/pexels-valerie-polishchuk-246988438-13034999.jpg"
+            class="d-block w-100 carousel-img"
+            alt=""
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>High Quality</h5>
+            <p>Original devices only</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="./img/pexels-valerie-polishchuk-246988438-13034999.jpg"
+            class="d-block w-100 carousel-img"
+            alt=""
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Maintenance</h5>
+            <p>Professional repair service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================= نهاية سلايدر الفوتر ================= -->
+
+    <!-- ================= ملفات الجافاسكريبت (JS Scripts) ================= -->
+    
+    <!-- ملف Bootstrap Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- تفعيل وتشغيل مكتبة AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+      });
+    </script>
+
+    <!-- مكتبة Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+    <!-- ملف الجافاسكريبت الخاص بنا -->
+    <script src="./index.js"></script>
+  </body>
+</html>
