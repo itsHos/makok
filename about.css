@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 1. تنسيق عنوان Our Story */
+.story-title {
+  font-family: "Playfair Display", serif; /* نفس الخط المستخدم في Our Clients Say */
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* 2. الخط الصغير الملون تحت العنوان */
+.story-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #4cc9f0; /* اللون السماوي */
+  border-radius: 2px;
+  margin-bottom: 30px; /* مسافة بين الخط والنص */
+}
+
+/* 3. تنسيق النص نفسه */
+.story-text {
+  font-family: "Inter", sans-serif; /* الخط الانجليزي النظيف */
+  font-size: 1rem;
+  font-weight: 300; /* خط رفيع زي الصورة */
+  line-height: 1.8 !important; /* تباعد الأسطر */
+  color: #6c757d; /* لون رمادي (Text Muted) */
+}
+
+/* تحسين للموبايل: النص ياخد العرض كله */
+@media (max-width: 768px) {
+  .story-text {
+    width: 100% !important; /* الغاء الـ 75% في الموبايل */
+    padding: 0 15px;
+  }
+}
+/* ================= تصميم الصورة الثابتة (Parallax) ================= */
+.parallax-banner {
+  /* 1. حط مسار صورة الخواتم هنا */
+  background-image: url("./img/iphone17.jpg");
+
+  /* 2. حدد ارتفاع للسكشن عشان الصورة تبان */
+  height: 500px;
+  /* لو عاوزها تاخد الشاشة كلها استخدم height: 100vh; */
+
+  /* 3. أهم سطر: ده اللي بيثبت الصورة والاسكرول بيتحرك */
+  background-attachment: fixed;
+
+  /* 4. تظبيط أبعاد الصورة */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ================= تصميم سكشن المميزات (Mission, Vision) ================= */
+.features-section {
+  background-color: #fff; /* لازم يكون ليه لون عشان يغطي على الصورة لما يطلع فوقيها */
+  position: relative;
+}
+
+.feature-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+}
+
+.icon-box img {
+  /* تأثير بسيط للأيقونات */
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .icon-box img {
+  transform: scale(1.1) rotate(5deg);
+}
+/* تنسيق غلاف الصورة (تصغير الحجم وتوسيطه) */
+.img-wrapper {
+  max-width: 250px; /* تحكم في الرقم ده لتصغير أو تكبير الصورة */
+  margin: 0 auto 1.5rem; /* 0 auto لتوسيط الصورة، و 1.5rem مسافة تحتها */
+  overflow: hidden; /* عشان الصورة متخرجش بره */
+
+  /* الفلتر للأبيض والأسود (لو لسه محتاجه) */
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+/* عشان الصورة تفضل متجاوبة */
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* عشان أبعاد الصورة متبوظش */
+  transition: transform 0.5s ease;
+}
+
+/* تأثير الزووم والألوان عند الهوفر */
+.team-member:hover .img-wrapper {
+  filter: grayscale(0%);
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+/* خلفية السكشن (رمادي فاتح جداً زي الصورة) */
+.testimonials-classic {
+  background-color: #f8f9fa; /* أو #f9f9f9 */
+}
+
+/* تنسيق العنوان */
+.section-title {
+  font-family: "Playfair Display", serif; /* الخط الكلاسيكي */
+  font-weight: bold;
+  color: #000;
+  font-size: 2.5rem;
+}
+
+/* الخط الملون تحت العنوان */
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: #4cc9f0; /* اللون السماوي */
+}
+
+/* نص التعليق */
+.review-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8; /* تباعد الأسطر */
+  color: #666;
+}
+
+/* صورة العميل */
+.img-box {
+  width: 70px; /* حجم الصورة صغير */
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* اسم العميل */
+.client-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* وظيفة العميل */
+.client-role {
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+}
+/* خلفية النشرة البريدية */
+.newsletter-section {
+  background-color: #4cd5c5; /* لون التركواز */
+}
+
+/* تحسين شكل حقول الإدخال */
+.newsletter-section .form-control {
+  border: none; /* إزالة الحدود */
+  box-shadow: none; /* إزالة الظل عند الضغط */
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* تحسين شكل الزر */
+.newsletter-section .btn-dark {
+  background-color: #333333; /* رمادي غامق */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-section .btn-dark:hover {
+  background-color: #000000; /* أسود عند الهوفر */
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 992px) {
+  .newsletter-section {
+    text-align: center; /* توسيط الكلام في الموبايل */
+  }
+}

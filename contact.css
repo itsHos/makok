@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* تنسيق الخطوط */
+.section-title {
+  font-family: "Playfair Display", serif; /* الخط الكلاسيكي */
+  color: #000;
+}
+
+/* تنسيق الأيقونات */
+.icon-box {
+  color: #4cd5c5; /* اللون التركواز */
+  font-size: 2.5rem; /* حجم الأيقونة */
+  line-height: 1;
+  margin-top: -5px; /* رفع الأيقونة قليلاً لتوازيها مع النص */
+}
+
+/* تحسين شكل النصوص */
+.contact-info-section h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.contact-info-section p {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+/* ضبط ارتفاع الخريطة */
+.map-container iframe {
+  min-height: 600px; /* ارتفاع ثابت للخريطة عشان تظهر كويس */
+  height: 100%;
+}
+
+/* تنسيق حقول الإدخال لتشبه الصورة */
+.contact-form-wrapper .form-control {
+  border: 1px solid #e5e5e5; /* لون حدود فاتح */
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #666;
+  transition: border-color 0.3s;
+}
+
+/* عند الضغط على الحقل */
+.contact-form-wrapper .form-control:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+/* الحقول الدائرية (Rounded Pill) */
+.rounded-pill {
+  border-radius: 50px !important;
+}
+
+/* منطقة الرسالة (Textarea) بحواف أقل دائرية شوية */
+.rounded-4 {
+  border-radius: 20px !important;
+}
+
+/* تنسيق الزر الأسود */
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  letter-spacing: 1px; /* مسافة بين الحروف */
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #333; /* لون أفتح قليلاً عند الهوفر */
+  color: #fff;
+}
+
+/* في الشاشات الصغيرة (الموبايل) */
+@media (max-width: 992px) {
+  .map-container iframe {
+    min-height: 400px; /* تقليل ارتفاع الخريطة في الموبايل */
+  }
+  .contact-form-wrapper {
+    padding: 30px !important; /* تقليل المسافات الداخلية */
+  }
+}
+.client-content {
+  text-align: center;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+/* خلفية النشرة البريدية */
+.newsletter-section {
+  background-color: #4cd5c5; /* لون التركواز */
+}
+
+/* تحسين شكل حقول الإدخال */
+.newsletter-section .form-control {
+  border: none; /* إزالة الحدود */
+  box-shadow: none; /* إزالة الظل عند الضغط */
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* تحسين شكل الزر */
+.newsletter-section .btn-dark {
+  background-color: #333333; /* رمادي غامق */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-section .btn-dark:hover {
+  background-color: #000000; /* أسود عند الهوفر */
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 992px) {
+  .newsletter-section {
+    text-align: center; /* توسيط الكلام في الموبايل */
+  }
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 1. خطوط جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 2. مكتبة AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- 3. مكتبة Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- 4. مكتبة Bootstrap (لازم تكون قبل ملفك) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- 5. ملف التنسيقات الخاص بك (لازم يكون آخر واحد عشان يركب فوقهم كلهم) -->
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./contact.css" />
+
+    <!-- أيقونة الموقع -->
+    <link
+      rel="shortcut icon"
+      href="./icons/mackok_icon.ico"
+      type="image/x-icon"
+    />
+
+    <title>Macoc</title>
+  </head>
+  <body>
+    <header class="container py-3">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary w-100 d-flex align-items-center animate__animated animate__fadeInDown"
+      >
+        <!-- اللوجو (الصورة على اليسار) -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="./icons/mackok_icon.ico"
+            style="width: 80px; height: 80px"
+          />
+        </a>
+
+        <!-- زر القائمة للموبايل (Hamburger Menu) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- محتوى القائمة (الروابط + الصورة اليمين) داخل القائمة المنسدلة -->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="mainNav"
+        >
+          <!-- الروابط في المنتصف -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- الصورة الشخصية (على اليمين) -->
+          <a href="#">
+            <img
+              src="./icons/istockphoto-1386179512-1024x1024.jpg"
+              class="rounded-circle"
+              style="width: 80px; height: 80px"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- تأكد من إضافة رابط Bootstrap Icons في الـ Head (موجود في الأسفل) -->
+
+    <section class="contact-info-section py-5">
+      <div class="container">
+        <!-- 1. العنوان -->
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title display-5 fw-bold">
+            Let us know what you have in mind
+          </h2>
+          <p class="text-muted mt-3">
+            Visit our shop to see amazing creations from our designers
+          </p>
+          <div
+            class="mx-auto mt-3"
+            style="
+              width: 60px;
+              height: 3px;
+              background: #4cd5c5;
+              border-radius: 2px;
+            "
+          ></div>
+        </div>
+
+        <!-- 2. تفاصيل الاتصال -->
+        <div class="row g-4">
+          <!-- العنوان (Location) -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="d-flex align-items-start">
+              <div class="icon-box me-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-2">Store Location:</h6>
+                <p class="text-muted small mb-0">
+                  19749 Derborn St. Chatsworth, CA 11321, USA
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- الهاتف (Phone) -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="d-flex align-items-start">
+              <div class="icon-box me-3">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-2">Call number:</h6>
+                <p class="text-muted small mb-0">+20 01025996507</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- الإيميل (Email) -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="d-flex align-items-start">
+              <div class="icon-box me-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-2">Email:</h6>
+                <p class="text-muted small mb-0">
+                  info@diamondcity.com<br />
+                  support@diamondcity.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- مواعيد العمل (Hours) -->
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="d-flex align-items-start">
+              <div class="icon-box me-3">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-2">Working hours:</h6>
+                <p class="text-muted small mb-0">
+                  Monday - Saturday 10.00am - 5.00pm. Sunday 11.00 - 4.00pm
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-map-form">
+      <div class="container-fluid p-0">
+        <!-- container-fluid p-0 عشان الخريطة تاخد العرض كامل للحافة -->
+        <div class="row g-0">
+          <!-- g-0 عشان نشيل المسافات بين العمودين -->
+
+          <!-- 1. عمود الخريطة (على اليسار) -->
+          <div class="col-lg-6">
+            <div class="map-container h-100">
+              <!-- خريطة جوجل (London Eye) -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d862.8515182797421!2d31.296099780397853!3d30.111191748430635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815656002ecbb%3A0x204a3351de35b1ac!2zMSDYo9io2Ygg2KjZg9ixINin2YTYtdiv2YrZgtiMINin2YTYo9mF2YrYsdmK2Kkg2KfZhNi02YXYp9mE2YrYqdiMINin2YTYo9mF2YrYsdmK2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKwgNDUxMzExMA!5e0!3m2!1sar!2seg!4v1763755815723!5m2!1sar!2seg"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- 2. عمود الفورم (على اليمين) -->
+          <div class="col-lg-6">
+            <div class="contact-form-wrapper p-5">
+              <!-- p-5 عشان نعمل مسافة داخلية كبيرة -->
+
+              <!-- العنوان -->
+              <h3 class="fw-bold text-uppercase mb-3">Contact Us</h3>
+              <p class="text-muted mb-4">
+                Your email address will not be published. Required fields are
+                marked *
+              </p>
+
+              <!-- الفورم -->
+              <form>
+                <div class="row g-3">
+                  <!-- الاسم -->
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill py-3 px-4"
+                      placeholder="Your Name"
+                    />
+                  </div>
+
+                  <!-- الإيميل -->
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control rounded-pill py-3 px-4"
+                      placeholder="Your Email"
+                    />
+                  </div>
+
+                  <!-- الموضوع -->
+                  <div class="col-12">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill py-3 px-4"
+                      placeholder="Subject"
+                    />
+                  </div>
+
+                  <!-- الرسالة -->
+                  <div class="col-12">
+                    <textarea
+                      class="form-control rounded-4 py-3 px-4"
+                      rows="6"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+
+                  <!-- زر الإرسال -->
+                  <div class="col-12 mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-black rounded-pill px-5 py-3 fw-bold text-uppercase"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- قسم الاشتراك في النشرة البريدية -->
+    <section class="newsletter-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- الجزء النصي (على اليسار) -->
+          <div
+            class="col-lg-5 mb-3 mb-lg-0 text-center text-lg-start text-white"
+          >
+            <h3 class="fw-bold text-uppercase mb-1">Join Our Newsletter</h3>
+            <p class="mb-0 fs-5">Get 5% off discount every purchase!</p>
+          </div>
+
+          <!-- جزء الفورم (على اليمين) -->
+          <div class="col-lg-7">
+            <form>
+              <div class="row g-3">
+                <!-- حقل الاسم -->
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control rounded-pill py-2 px-3"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <!-- حقل الإيميل -->
+                <div class="col-md-5">
+                  <input
+                    type="email"
+                    class="form-control rounded-pill py-2 px-3"
+                    placeholder="Your email address"
+                  />
+                </div>
+
+                <!-- زر الاشتراك -->
+                <div class="col-md-3">
+                  <button
+                    type="submit"
+                    class="btn btn-dark w-100 rounded-pill py-2 fw-bold text-uppercase"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ملف Bootstrap Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- تفعيل وتشغيل مكتبة AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+      });
+    </script>
+
+    <!-- مكتبة Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- ملف الجافاسكريبت الخاص بنا -->
+    <script src="./index.js"></script>
+  </body>
+</html>

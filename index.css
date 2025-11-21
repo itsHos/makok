@@ -3,18 +3,20 @@
    ========================================= */
 :root {
   /* الألوان الرئيسية */
-  --primary-color: #4f46e5;       /* أزرق نيلي */
-  --secondary-color: #f59e0b;     /* برتقالي */
-  --accent-color: #10b981;        /* أخضر */
-  
+  --primary-color: #4f46e5; /* أزرق نيلي */
+  --secondary-color: #f59e0b; /* برتقالي */
+  --accent-color: #10b981; /* أخضر */
+
   /* ألوان النصوص والكروت */
-  --card-bg: #ffffff;             
-  --text-main: #111827;           
-  --text-muted: #6b7280;          
-  
+  --card-bg: #ffffff;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+
   /* الظلال */
-  --main-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --hover-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --main-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.15),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* =========================================
@@ -28,19 +30,42 @@
 
 body {
   scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-main);
-  
+
   /* --- بداية كود الخلفية الجديد --- */
   background-color: #f3f4f6; /* لون أساسي احتياطي */
-  
+
   /* تدرج لوني (Mesh Gradient): بقعة زرقاء أعلى اليسار، وبقعة برتقالية أسفل اليمين */
-  background-image: 
-      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.08) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
-      
+  background-image: radial-gradient(
+      at 0% 0%,
+      rgba(79, 70, 229, 0.08) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
+
   background-attachment: fixed; /* يجعل الخلفية ثابتة أثناء السكرول */
   background-size: cover;
+
+  /* خط Inter هو الأفضل للمواقع التقنية */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+
+  /* باقي إعداداتك زي ما هي */
+  scroll-behavior: smooth;
+  background-color: var(--body-bg);
+  color: var(--text-main);
+
+  /* كود الخلفية الملونة خليه زي ما هو */
+  background-image: radial-gradient(
+      at 0% 0%,
+      rgba(79, 70, 229, 0.08) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+  background-size: cover;
+
   /* --- نهاية كود الخلفية --- */
 }
 
@@ -55,8 +80,8 @@ a {
    3. تنسيقات الهيدر والناف بار (Header & Navbar)
    ========================================= */
 header.container {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* جعل الناف بار أبيض مع ظل خفيف */
@@ -79,14 +104,15 @@ header.container {
 
 /* روابط الناف بار */
 .nav-link {
-    color: var(--text-main) !important;
-    font-weight: 600;
-    margin: 0 10px;
-    transition: color 0.3s;
+  color: var(--text-main) !important;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-color) !important;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
 }
 
 /* صورة البروفايل الدائرية */
@@ -113,7 +139,11 @@ header.container {
 }
 
 .overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); /* تدرج لوني بدل لون ثابت */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  ); /* تدرج لوني بدل لون ثابت */
   width: 100%;
   height: 100%;
   display: flex;
@@ -132,12 +162,12 @@ header.container {
 .content h1 {
   font-size: 60px;
   font-weight: bold;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .content p {
   font-size: 20px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
 }
 
@@ -153,24 +183,36 @@ header.container {
 }
 
 .carousel-caption h5 {
-    font-weight: bold;
-    background-color: var(--primary-color);
-    padding: 5px 15px;
-    border-radius: 5px;
-    display: inline-block;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: inline-block;
 }
 
 /* تأثير اللمعة (Shimmer Effect) */
 @keyframes shimmer {
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
 }
 
 .carousel-item::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   animation: shimmer 4s infinite;
   pointer-events: none;
 }
@@ -213,7 +255,13 @@ header.container {
 /* التدرج اللوني للنصوص المتحركة باستخدام متغيرات الألوان */
 .ml9 .letters,
 .ml2 {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color),
+    var(--primary-color)
+  );
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -221,43 +269,49 @@ header.container {
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* =========================================
    6. تنسيقات الكروت والمنتجات (Cards & Products)
    ========================================= */
 .card {
-    background-color: var(--card-bg);
-    border: none; /* إزالة الحدود الافتراضية */
-    border-radius: 15px;
-    box-shadow: var(--main-shadow); /* إضافة ظل ناعم */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+  background-color: var(--card-bg);
+  border: none; /* إزالة الحدود الافتراضية */
+  border-radius: 15px;
+  box-shadow: var(--main-shadow); /* إضافة ظل ناعم */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 /* تأثير الهوفر على الكارت بالكامل */
 .card:hover {
-    transform: translateY(-10px); /* يرتفع لأعلى */
-    box-shadow: var(--hover-shadow); /* ظل أقوى */
+  transform: translateY(-10px); /* يرتفع لأعلى */
+  box-shadow: var(--hover-shadow); /* ظل أقوى */
 }
 
 .card-body {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .card-title {
-    color: var(--text-main);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .card-text {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.5;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* تنسيقات خاصة للكروت العريضة (What We Sell) */
@@ -271,8 +325,16 @@ header.container {
 .product-card::before {
   content: "";
   position: absolute;
-  top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 70, 229, 0.1),
+    transparent
+  );
   transition: left 0.5s;
   z-index: 1;
 }
@@ -318,17 +380,444 @@ header.container {
 
 /* تنسيق رابط "Let's chat" */
 .whats a.link-dark {
-    color: var(--primary-color) !important;
-    font-weight: 600;
-    margin-left: 10px;
-    transition: color 0.3s;
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: color 0.3s;
 }
 
 .whats a.link-dark:hover {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* ================= New Clean Card Design ================= */
+
+/* 1. الكارت نفسه */
+.clean-card {
+  background: transparent;
+  border: none;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* 2. صندوق الصورة (أهم جزء) */
+.img-box {
+  position: relative;
+  background-color: #f3f4f6; /* رمادي فاتح جداً وشيك */
+  border-radius: 15px; /* حواف ناعمة */
+  overflow: hidden;
+  aspect-ratio: 1 / 1; /* يخلي الصندوق مربع دائماً */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* الصورة جوه الصندوق */
+.img-box img {
+  width: 85%; /* الصورة متلزقش في الحواف */
+  height: 85%;
+  object-fit: contain; /* تحافظ على أبعادها */
+  transition: transform 0.5s ease;
+  mix-blend-mode: multiply; /* خدعة بتخفي الخلفية البيضاء للصورة */
+}
+
+/* تكبير الصورة عند الهوفر */
+.clean-card:hover .img-box img {
+  transform: scale(1.1);
+}
+
+/* 3. طبقة الزرار (Overlay) */
+.overlay-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.clean-card:hover .overlay-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* زرار الواتساب */
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+.whatsapp-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* يخلي أيقونة الواتس بيضاء */
+  mix-blend-mode: normal; /* الغاء الـ multiply للايقونة */
+}
+
+/* 4. معلومات المنتج (تحت الصورة) */
+.info-box {
+  text-align: center;
+}
+
+.category {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.price .new {
+  color: #4f46e5; /* لون البراند بتاعك */
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* 5. البادجات (Sale/New) */
+.badge-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-tag.sale {
+  background-color: #ef4444;
+}
+.badge-tag.new {
+  background-color: #3b82f6;
+}
+/* تنسيق أزرار التابات (Tabs) */
+.custom-tab {
+  background: transparent !important;
+  color: #6b7280 !important; /* لون رمادي فاتح */
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 0 !important;
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.custom-tab.active {
+  color: #4f46e5 !important; /* لون أزرق عند التفعيل */
+}
+
+/* الخط اللي بيظهر تحت الكلمة */
+.custom-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #4f46e5;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-tab.active::after {
+  width: 100%; /* يملأ المساحة لما يكون نشط */
+}
+/* الخلفية العامة للقسم */
+.client-reviews-section {
+  background-color: #f9f9f9; /* لون خلفية فاتح جداً زي الصورة */
+  position: relative;
+}
+
+/* تصميم الكارت الأبيض */
+.testimonial-card {
+  background: #fff;
+  padding: 50px;
+  max-width: 900px; /* عشان الكارت ميبقاش عريض أوي */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً */
+  border-radius: 5px;
+  margin: 20px auto; /* توسيط الكارت */
+}
+
+/* تصميم الصورة */
+.client-img-box {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.client-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* النصوص */
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.client-name {
+  font-family: "Playfair Display", serif; /* فونت شيك للاسم */
+  color: #333;
+  font-weight: bold;
+}
+
+/* أزرار التنقل (الأسهم) */
+.custom-nav-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #fff !important; /* خلفية بيضاء للزر */
+  border-radius: 50%;
+  opacity: 1 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* أيقونة السهم */
+.nav-icon {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* مكان الأزرار (عشان يطلعوا بره الكارت شوية زي الصورة) */
+.carousel-control-prev.custom-nav-btn {
+  left: -25px; /* يخرج لليسار */
+}
+
+.carousel-control-next.custom-nav-btn {
+  right: -25px; /* يخرج لليمين */
+}
+
+/* تجاوب مع الموبايل (عشان الأزرار متخرجش بره الشاشة) */
+@media (max-width: 992px) {
+  .carousel-control-prev.custom-nav-btn {
+    left: 0;
+  }
+  .carousel-control-next.custom-nav-btn {
+    right: 0;
+  }
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+}
+/* 1. الخلفية اللي فيها التمثال الباهت */
+.client-reviews-section {
+  position: relative;
+  padding: 80px 0;
+  /* هنا بنحط صورة الخلفية وفوقيها طبقة بيضاء شفافة عشان تفتحها */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("./img/statue-bg.jpg"); /* حط هنا مسار صورة الخلفية بتاعتك */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* عشان الخلفية تثبت والسكشن بيتحرك (Parallax) */
+}
+
+/* تنسيق العنوان */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 3px;
+  background: #4cc9f0;
+  margin: 20px auto;
+}
+
+/* 2. تحديد حجم الكاروسيل (عشان ميمطش للأخر) */
+.custom-carousel {
+  max-width: 850px; /* ده اللي بيخلي العرض ملموم زي الصورة */
+  position: relative;
+}
+
+/* 3. تصميم الكارت الأبيض الكبير */
+.testimonial-card {
+  background: #fff;
+  padding: 40px; /* مساحة داخلية كبيرة عشان الكلام ياخد راحته */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* ظل ناعم */
+  border-radius: 0; /* حواف حادة زي الصورة أو ممكن تخليها 5px */
+  margin: 20px 0; /* مسافة عشان الظل يبان */
+}
+
+/* الصورة */
+.client-img-box {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto; /* توسيط الصورة في الموبايل */
+  border: 5px solid #fff; /* برواز أبيض */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.client-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* النصوص */
+.client-content {
+  text-align: left; /* الكلام يبدأ من الشمال */
+  padding-left: 20px;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.client-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.client-role {
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* 4. أزرار التحكم (تكون بره الصندوق الأبيض) */
+.nav-btn-out {
+  width: 50px;
+  height: 50px;
+  background-color: #fff !important;
+  border-radius: 50%;
+  opacity: 1 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* تحريك الأزرار للخارج */
+.carousel-control-prev.nav-btn-out {
+  left: -70px; /* يخرج بره الصندوق لليسار */
+}
+
+.carousel-control-next.nav-btn-out {
+  right: -70px; /* يخرج بره الصندوق لليمين */
+}
+
+.nav-icon {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 992px) {
+  /* في الشاشات الصغيرة، خلي الأزرار جوه شوية أو تحت */
+  .carousel-control-prev.nav-btn-out {
+    left: -20px;
+  }
+  .carousel-control-next.nav-btn-out {
+    right: -20px;
+  }
+
+  .client-content {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+/* خلفية النشرة البريدية */
+.newsletter-section {
+  background-color: #4cd5c5; /* لون التركواز */
+}
+
+/* تحسين شكل حقول الإدخال */
+.newsletter-section .form-control {
+  border: none; /* إزالة الحدود */
+  box-shadow: none; /* إزالة الظل عند الضغط */
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* تحسين شكل الزر */
+.newsletter-section .btn-dark {
+  background-color: #333333; /* رمادي غامق */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-section .btn-dark:hover {
+  background-color: #000000; /* أسود عند الهوفر */
+}
+
+/* ريسبونسيف للموبايل */
+@media (max-width: 992px) {
+  .newsletter-section {
+    text-align: center; /* توسيط الكلام في الموبايل */
+  }
 }
